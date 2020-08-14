@@ -1,0 +1,8 @@
+
+<!-- <%= @cocktails %> -->
+<ul>
+  <h1>My Cocktails</h1>
+  <% @cocktails.each do |cocktail| %>
+   <li><%= link_to cocktail.name, cocktail_path(cocktail) %>   <%= link_to "Remove", cocktail_path(cocktail), method: :delete %></li>
+  <% end %>
+</ul>
